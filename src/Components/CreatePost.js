@@ -56,19 +56,22 @@ class CreatePost extends React.Component {
             defaultValue={this.props.title}
             required
           />
+          <br/>
           <div className="inputLabel">Location of Event: </div>
           <input
             name="location"
             type="text"
             defaultValue={this.props.location}
           />
-          <div className="inputLabel"> Date of Event: </div>
+          <br/>
+          <div className="inputLabel">Date of Event:</div>
           <input
             name="dateEvent"
             type="datetime-local"
             required
             defaultValue={this.props.dateEvent}
           />
+          <br/>
           <div className="inputLabel">Current Party Size: </div>
           <input
             name="peopleAttending"
@@ -77,6 +80,7 @@ class CreatePost extends React.Component {
             max="3"
             required
           />
+          <br/>
           <div className="buttonHolder">
             <button className="button">Create Group!</button>
           </div>
