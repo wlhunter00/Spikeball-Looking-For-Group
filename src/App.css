@@ -1,0 +1,239 @@
+/* WORKS CITED: */
+/* BACKGROUND FROM: https://1stwebdesigner.com/15-css-background-effects/ by Manuel Pinto https://manuelpinto.in */
+/* BUTTON OUTLINES FROM:  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+input {
+  margin-bottom: 5px;
+  margin-left: 2%;
+  margin-right: 2%;
+  -webkit-appearance: none;
+  width: 96%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  transition: all 0.15s ease;
+}
+input:hover {
+  background: rgba(#223254, 0.03);
+}
+
+input:focus {
+  background: none;
+  outline: none;
+  color: black;
+  transform: translateY(-26px) scale(0.75);
+  transform: scaleX(1);
+}
+
+.label {
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.createGroup {
+  height: auto;
+  width: 100%;
+  border-radius: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  padding: 0.25em;
+  border: 0.25em solid transparent;
+  background: linear-gradient(to bottom, #fff, #bbb) content-box,
+    linear-gradient(to right, #e94332, #a91302) padding-box,
+    linear-gradient(to right, #0867a6, #4aa9e8) border-box;
+}
+
+.buttonHolder {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  border: 3px solid #333333;
+  padding: 20px 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    -45deg,
+    rgb(214, 100, 44),
+    rgb(83, 112, 147),
+    rgb(186, 182, 72),
+    rgb(132, 67, 171)
+  );
+  animation: gradientBG 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.button:after {
+  content: "";
+  border: 3px solid #3600fc;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  color: #f2f2f2;
+  white-space: nowrap;
+}
+
+.button:active {
+  top: 3px;
+  left: 3px;
+}
+
+.button:hover {
+  background: rgba(242, 242, 242, 1);
+}
+
+.App {
+  font-family: "Lato", sans-serif;
+  font-size: 21px;
+  text-align: center;
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.react-spinner-material {
+  margin-top: 1%;
+  margin-left: 49%;
+}
+
+.PostListing {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.PostListing::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953),
+    linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
+    linear-gradient(#377af5, #377af5);
+  animation: rotate 4s linear infinite;
+}
+
+.PostListing::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
+}
+
+.welcomeText {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.App {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow: auto;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.createPost {
+  margin-top: 10px;
+  background-color: white;
+  overflow: auto;
+  clear: both;
+  display: block;
+}
+
+.pageWrapper {
+  width: 60%;
+}
+
+.inputLabel {
+  margin-top: 5px;
+  width: 80%;
+  text-align: center;
+  display: contents;
+}
