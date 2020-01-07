@@ -25,6 +25,7 @@ const auth = require("./routes/api/auth.js");
 
 app.use("/api/user", auth);
 
-const port = process.env.PORT || 5000;
+const normalizePort = port => parseInt(port,10);
+const port = normalizePort(process.env.PORT || 5000);
 
 app.listen(port, () => console.log("Server started on port ", port));
