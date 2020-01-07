@@ -31,9 +31,8 @@
     "clientTest": "react-scripts test",
     "clientEject": "react-scripts eject",
     "serverDev": "nodemon server/index.js",
-    "clientStart": "react-scripts start",
-    "serverStart": "node server/index.js",
-    "start": "concurrently \"npm run serverDev\" \"npm run clientStart\""
+    "start": "react-scripts start",
+    "serverStart": "node server/index.js"
   },
   "proxy": "http://localhost:5000/",
   "eslintConfig": {
