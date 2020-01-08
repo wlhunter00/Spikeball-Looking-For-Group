@@ -51,9 +51,10 @@ function App() {
     //   newUser.username
     // }
     console.log("New user token", newUser)
+    delete newUser.authtoken;
+    console.log(newUser)
     setUser(newUser);
     setToken(newToken);
-    console.log("New token", newToken);
     setDisplay("PostList");
   }
   function handleBackToMain() {
