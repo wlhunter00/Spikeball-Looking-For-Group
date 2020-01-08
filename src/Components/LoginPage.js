@@ -25,7 +25,7 @@ class LoginPage extends React.Component {
         console.log("data part", res.data.message)
         console.log("token", res.data.message.authtoken);
         // console.log("rest of data", userInfo)
-        this.props.handleLogin(res.data.message, res.headers.authtoken);
+        this.props.handleLogin(res.data.message, res.data.message.authtoken);
       }
     } catch (err) {
       console.log("Error:", err);
@@ -46,7 +46,7 @@ class LoginPage extends React.Component {
       if (res.data.type === "Error") {
         alert(res.data.message);
       } else {
-        this.props.handleLogin(res.data.message, res.headers.authtoken);
+        this.props.handleLogin(res.data.message, res.data.message.authtoken);
       }
     } catch (err) {
       console.log("Error:", err);
