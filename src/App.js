@@ -46,11 +46,12 @@ function App() {
     setDisplay("ViewPost");
   }
   function handleLogin(newUser, newToken) {
-    reworkedUser = {
-      newUser._id,
-      newUser.username
-    }
-    setUser(reworkedUser);
+    // reworkedUser = {
+    //   newUser._id,
+    //   newUser.username
+    // }
+    console.log("New user token", newUser)
+    setUser(newUser);
     setToken(newToken);
     console.log("New token", newToken);
     setDisplay("PostList");
