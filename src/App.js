@@ -5,7 +5,7 @@ import LoginPage from "./Components/LoginPage.js";
 import ViewPost from "./Components/ViewPost.js";
 
 function App() {
-  const [display, setDisplay] = useState(localStorage.getItem("LoginPage");
+  const [display, setDisplay] = useState("LoginPage");
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [user, setUser] = useState();
   const [viewPostId, setViewPostId] = useState(
