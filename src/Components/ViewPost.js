@@ -87,15 +87,15 @@ function ViewPost(props) {
     }
   }
 
-  useEffect(() => {
-    setLoaded(false);
-    const source = axios.CancelToken.source();
-    handleUpdatePost();
-    console.log(post);
-    return () => {
-      source.cancel();
-    };
-  }, []);
+  // useEffect(() => {
+  //   setLoaded(false);
+  //   const source = axios.CancelToken.source();
+  //   handleUpdatePost();
+  //   console.log(post);
+  //   return () => {
+  //     source.cancel();
+  //   };
+  // }, []);
 
   return (
     <div className="viewPost">
