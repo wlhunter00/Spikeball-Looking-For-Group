@@ -20,6 +20,7 @@ class LoginPage extends React.Component {
       if (res.data.type === "Error") {
         alert(res.data.message);
       } else {
+        console.log(res)
         this.props.handleLogin(res.data.message, res.headers.authtoken);
       }
     } catch (err) {
