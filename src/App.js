@@ -46,13 +46,7 @@ function App() {
     setDisplay("ViewPost");
   }
   function handleLogin(newUser, newToken) {
-    // reworkedUser = {
-    //   newUser._id,
-    //   newUser.username
-    // }
-    console.log("New user token", newUser)
     delete newUser.authtoken;
-    console.log(newUser)
     setUser(newUser);
     setToken(newToken);
     setDisplay("PostList");
