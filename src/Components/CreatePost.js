@@ -33,6 +33,7 @@ class CreatePost extends React.Component {
           success = false;
         } else {
           success = true;
+          console.log("token", this.props.token)
           console.log("Post sucessfull created", response)
           id = response.data._id;
         }
