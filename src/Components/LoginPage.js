@@ -21,9 +21,9 @@ class LoginPage extends React.Component {
         alert(res.data.message);
       } else {
         console.log("whole response:", res);
-        token = res.data.message.authtoken;
-        // userInfo =  {res.data.message._id, res.data.message.username};
-        console.log("token", token);
+        // userInfo =  [res.data.message._id, res.data.message.username];
+        console.log("data part", res.data.message)
+        console.log("token", res.data.message.authtoken);
         // console.log("rest of data", userInfo)
         this.props.handleLogin(res.data.message, res.headers.authtoken);
       }
