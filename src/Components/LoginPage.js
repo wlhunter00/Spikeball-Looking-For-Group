@@ -16,7 +16,7 @@ class LoginPage extends React.Component {
       password: data.get("password")
     };
     try {
-      const res = await axios.post("/api/user/login/", newData);
+      const res = await axios.post("https://spikeball-lfg-backend.herokuapp.com/api/posts/api/user/login/", newData);
       if (res.data.type === "Error") {
         alert(res.data.message);
       } else {
@@ -37,7 +37,7 @@ class LoginPage extends React.Component {
       email: data.get("email")
     };
     try {
-      const res = await axios.post("/api/user/register/", newData);
+      const res = await axios.post("https://spikeball-lfg-backend.herokuapp.com/api/posts/api/user/register/", newData);
       if (res.data.type === "Error") {
         alert(res.data.message);
       } else {

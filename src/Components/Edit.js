@@ -25,7 +25,7 @@ class Edit extends React.Component {
     };
     try {
       console.log(this.props.token);
-      const res = await axios.patch("/api/posts/wholePost/", newData, config);
+      const res = await axios.patch("https://spikeball-lfg-backend.herokuapp.com/api/posts/wholePost/", newData, config);
       console.log(res);
       if (res.data.type === "Error") {
         alert(res.data.message);

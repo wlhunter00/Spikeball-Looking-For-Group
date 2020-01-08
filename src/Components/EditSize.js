@@ -25,7 +25,7 @@ class EditSize extends React.Component {
     try {
       console.log(newData);
       const res = await axios.patch(
-        "/api/posts/changePartySize/",
+        "https://spikeball-lfg-backend.herokuapp.com/api/posts/changePartySize/",
         newData,
         config
       );
