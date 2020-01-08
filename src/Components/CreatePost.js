@@ -26,6 +26,7 @@ class CreatePost extends React.Component {
     let success = false;
     let id = "";
     try {
+      console.log("Creating the new post", newData)
       await axios.post("https://spikeball-lfg-backend.herokuapp.com/api/posts", newData, config).then(function(response) {
         if (response.data.name === "ValidationError") {
           alert(response.data.message);
