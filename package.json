@@ -30,7 +30,7 @@
     "clientStart": "react-scripts start",
     "serverStart": "node server/index.js",
     "dev": "concurrently \"npm run serverDev\" \"npm run clientStart\"",
-    "start": "react-scripts build"
+    "start": "react-scripts start"
   },
   "engines": {
     "node": "12.14.1",
