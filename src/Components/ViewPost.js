@@ -13,7 +13,7 @@ function ViewPost(props) {
 
   async function handleUpdatePost() {
     try {
-      const url = "https://spikeball-lfg-backend.herokuapp.com/api/posts/api/posts/" + props.postId + "/";
+      const url = "https://spikeball-lfg-backend.herokuapp.com/api/posts/" + props.postId + "/";
       console.log(url);
       const res = await axios.get(url);
       console.log(res);
@@ -42,7 +42,7 @@ function ViewPost(props) {
   async function deletePost(id) {
     console.log("deleting", id, props.token);
     try {
-      await axios.delete("https://spikeball-lfg-backend.herokuapp.com/api/posts/api/posts/", {
+      await axios.delete("https://spikeball-lfg-backend.herokuapp.com/api/posts/", {
         headers: {
           authtoken: props.token
         },
@@ -67,7 +67,7 @@ function ViewPost(props) {
       postId: id
     };
     try {
-      var res = await axios.patch("https://spikeball-lfg-backend.herokuapp.com/api/posts/api/posts/leaveGroup", data, config);
+      var res = await axios.patch("https://spikeball-lfg-backend.herokuapp.com/api/posts/leaveGroup", data, config);
       console.log("left group", res);
     } catch (err) {
       console.log("error:", err);

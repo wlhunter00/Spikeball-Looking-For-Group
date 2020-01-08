@@ -45,7 +45,7 @@ function PostList(props) {
     await handleUpdatePostsList();
     console.log("Changing party size of", id);
     try {
-      const getURL = "https://spikeball-lfg-backend.herokuapp.com/api/posts/api/posts/" + id;
+      const getURL = "https://spikeball-lfg-backend.herokuapp.com/api/posts/" + id;
       const res = await axios.get(getURL);
       const postJoining = res.data;
       if (postJoining !== undefined) {
@@ -63,7 +63,7 @@ function PostList(props) {
             partySize: parseInt(partySize)
           };
           try {
-            await axios.patch("https://spikeball-lfg-backend.herokuapp.com/api/posts/api/posts/peopleAttending", data, config);
+            await axios.patch("https://spikeball-lfg-backend.herokuapp.com/api/posts/peopleAttending", data, config);
             console.log("Party sized changed");
             handleViewPost(id);
           } catch (err) {
