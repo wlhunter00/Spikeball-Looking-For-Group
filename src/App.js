@@ -48,6 +48,7 @@ function App() {
   function handleLogin(newUser, newToken) {
     setUser(newUser);
     setToken(newToken);
+    console.log("New token", newToken);
     setDisplay("PostList");
   }
   function handleBackToMain() {
