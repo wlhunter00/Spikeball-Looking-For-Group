@@ -27,9 +27,8 @@
     "clientEject": "react-scripts eject",
     "serverDev": "nodemon server/index.js",
     "clientStart": "react-scripts start",
-    "serverStart": "node server/index.js",
-    "dev": "concurrently \"npm run serverDev\" \"npm run clientStart\"",
-    "start": "react-scripts start"
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run serverDev\" \"npm run clientStart\""
   },
   "engines": {
     "node": "12.14.1",
