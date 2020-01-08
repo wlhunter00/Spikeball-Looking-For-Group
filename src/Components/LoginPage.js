@@ -22,9 +22,9 @@ class LoginPage extends React.Component {
       } else {
         console.log("whole response:", res);
         token = res.data.message.authtoken;
-        userInfo =  {res.data.message._id, res.data.message.username};
+        // userInfo =  {res.data.message._id, res.data.message.username};
         console.log("token", token);
-        console.log("rest of data", userInfo)
+        // console.log("rest of data", userInfo)
         this.props.handleLogin(res.data.message, res.headers.authtoken);
       }
     } catch (err) {
