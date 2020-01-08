@@ -9,6 +9,7 @@
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^0.20.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.4",
     "mongoose": "^5.7.12",
@@ -29,13 +30,12 @@
     "clientStart": "react-scripts start",
     "serverStart": "node server/index.js",
     "dev": "concurrently \"npm run serverDev\" \"npm run clientStart\"",
-    "start": "react-scripts start"
+    "start": "react-scripts build"
   },
-  "engines":{
+  "engines": {
     "node": "12.14.1",
     "npm": "6.13.4"
   },
-  "proxy": "https://spikeball-lfg-backend.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
