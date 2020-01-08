@@ -42,7 +42,8 @@ router.post("/register", async (req, res) => {
       type: "Success",
       message: {
         _id: savedUser._id,
-        username: savedUser.username
+        username: savedUser.username,
+        authtoken: token
       }
     });
   } catch (err) {
@@ -72,7 +73,8 @@ router.post("/login", async (req, res) => {
     type: "Success",
     message: {
       _id: user._id,
-      username: user.username
+      username: user.username,
+      authtoken: token
     }
   });
 });
