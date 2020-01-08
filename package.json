@@ -26,8 +26,8 @@
     "clientTest": "react-scripts test",
     "clientEject": "react-scripts eject",
     "serverDev": "nodemon server/index.js",
-    "clientStart": "react-scripts start",
-    "start": "node server/index.js",
+    "start": "react-scripts start",
+    "serverStart": "node server/index.js",
     "dev": "concurrently \"npm run serverDev\" \"npm run clientStart\""
   },
   "engines": {
